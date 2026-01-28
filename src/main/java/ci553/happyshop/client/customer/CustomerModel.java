@@ -182,6 +182,10 @@ public class CustomerModel {
                             .append(p.getOrderedQuantity()).append(" requested)\n");
                 }
                 theProduct=null;
+                for (Product p : insufficientProducts){
+                    trolley.removeIf(t -> t.getProductId().equals(p.getProductId()));
+                }
+
 
                 //TODO
                 // Add the following logic here:
@@ -189,8 +193,10 @@ public class CustomerModel {
                 // 2. Trigger a message window to notify the customer about the insufficient stock, rather than directly changing displayLaSearchResult.
                 //You can use the provided RemoveProductNotifier class and its showRemovalMsg method for this purpose.
                 //remember close the message window where appropriate (using method closeNotifierWindow() of RemoveProductNotifier class)
-                displayLaSearchResult = "Checkout failed due to insufficient stock for the following products:\n" + errorMsg.toString();
-                System.out.println("stock is not enough");
+                displayTaTrolley = ProductListFormatter.buildString(trolley);
+                RemoveProductNotifier signal = new RemoveProductNotifier();
+                signal.cusView = cusView;
+                signal.showRemovalMsg(errorMsg.toString());
             }
         }
         else{
