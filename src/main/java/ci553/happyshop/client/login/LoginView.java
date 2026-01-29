@@ -11,5 +11,9 @@ public class LoginView {
         Label Title = new Label("Welcome to Kairavs happy shop!");
 
         Button Btn_Guest = new Button("Continue as a Guest");
+        Button Btn_Login = new Button("Customer Login");
+        Button Btn_Creation = new Button("Create New Account");
+        Button Btn_Warehouse = new Button("Staff login");
+
     }
 }
