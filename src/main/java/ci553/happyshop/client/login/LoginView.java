@@ -15,5 +15,13 @@ public class LoginView {
         Button Btn_Creation = new Button("Create New Account");
         Button Btn_Warehouse = new Button("Staff login");
 
+        Btn_Guest.setOnAction(e -> loginController.Guests(stage));
+        Btn_Login.setOnAction(e -> loginController.login(stage));
+        Btn_Creation.setOnAction(e -> loginController.account_creation(stage));
+        Btn_Warehouse.setOnAction(e -> loginController.warehouse(stage));
+
+
+
+
     }
 }
