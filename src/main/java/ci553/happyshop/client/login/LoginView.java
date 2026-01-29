@@ -1,8 +1,10 @@
 package ci553.happyshop.client.login;
 
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 public class LoginView {
     public LoginController loginController;
@@ -19,6 +21,13 @@ public class LoginView {
         Btn_Login.setOnAction(e -> loginController.login(stage));
         Btn_Creation.setOnAction(e -> loginController.account_creation(stage));
         Btn_Warehouse.setOnAction(e -> loginController.warehouse(stage));
+
+        VBox vb = new VBox(15, Title, Btn_Guest, Btn_Login, Btn_Creation, Btn_Warehouse);
+        vb.setAlignment(Pos.CENTER);
+
+        stage.setScene(new Scene(vb, 400, 300));
+        stage.setTitle("Happy shop login");
+        stage.show();
 
 
 
