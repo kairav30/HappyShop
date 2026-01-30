@@ -12,7 +12,13 @@ class CustomerModelTest {
     }
     @Test
     void addToTrolley() {
-
+        // Setup
+        CustomerModel model = new CustomerModel() {
+            @Override
+            void updateView() {
+                // Disable UI update for test
+            }
+        };
 
 
     }
