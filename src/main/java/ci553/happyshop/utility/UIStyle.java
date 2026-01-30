@@ -56,12 +56,12 @@ public final class UIStyle {
     public static final int EmergencyExitWinHeight = 300;
 
     public static final String labelTitleStyle = "-fx-font-weight: bold; " +
-            "-fx-font-size: 16px; -fx-text-fill: purple;";
+            "-fx-font-size: 16px; -fx-text-fill: black;";
 
     public static final String labelStyle = "-fx-font-weight: bold; " +
             "-fx-font-size: 14px; " +
             "-fx-text-fill: black; " +
-            "-fx-background-color: lightblue;";
+            "-fx-background-color: white;";
 
     public static final String labelLowStockStyle =
             "-fx-font-size: 12px; -fx-text-fill: red;";
@@ -72,19 +72,18 @@ public final class UIStyle {
     public static final String buttonStyle = "-fx-font-size: 15";
 
     public static final String rootStyle = "-fx-padding: 8px; " +
-            "-fx-background-color: lightgreen";
-
+            "-fx-background-color: #9A7B4F";
     public static final String rootStyleBlue = "-fx-padding: 8px; " +
             "-fx-background-color: lightblue";
 
     public static final String rootStyleGray = "-fx-padding: 8px; " +
-            "-fx-background-color: lightgray";
+            "-fx-background-color: #9A7B4F";
 
     public static final String rootStyleWarehouse = "-fx-padding: 8px; " +
-            "-fx-background-color: lightpink";
+            "-fx-background-color: #9A7B4F";
 
     public static final String rootStyleYellow = "-fx-padding: 8px; " +
-            "-fx-background-color: lightyellow";
+            "-fx-background-color: #9A7B4F";
 
     public static final String rootVipCustomerStyle = "-fx-padding: 8px; " +
             "-fx-background-color: burlywood";
@@ -96,7 +95,7 @@ public final class UIStyle {
     public static final String tinyTextFiledStyle = "-fx-font-size: 12";
 
     public static final String labelMulLineStyle = "-fx-font-size: 16px; " +
-            "-fx-background-color: lightpink";
+            "-fx-background-color: #9A7B4F";
 
     public static final String labelPriceStyle = "-fx-font-size: 16px; " +
             "-fx-background-color: lightyellow";
