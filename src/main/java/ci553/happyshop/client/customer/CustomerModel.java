@@ -187,7 +187,7 @@ public class CustomerModel {
                 }
 
 
-
+                displayTaTrolley = ProductListFormatter.buildString(trolley);
                 RemoveProductNotifier signal = new RemoveProductNotifier();
                 signal.cusView = cusView;
                 signal.showRemovalMsg(errorMsg.toString());
