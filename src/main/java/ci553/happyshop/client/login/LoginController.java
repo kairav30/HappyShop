@@ -64,5 +64,63 @@ public class LoginController {
 
         view.start(stage);
     }
+    public void account_creation(Stage stage){
+        PasswordField encryption = new PasswordField();
+        Label Messages = new Label();
+
+
+        Button Save_Button = new Button("Save");
+        Button Back_Button = new Button("Back");
+
+
+
+        Save_Button.setOnAction(e ->{
+            try{
+                Files.write(
+                        Paths.get("accounts.txt"), (encryption.getText() + System.lineSeparator()).getBytes(),StandardOpenOption.CREATE,StandardOpenOption.APPEND);
+                Messages.setText("Account has been Created");
+            } catch (IOException ex){
+                Messages.setText("Error saving PIN");
+            }
+        });
+
+        Back_Button.setOnAction(e -> loginView.start(stage));
+
+        VBox root = new VBox(10, new Label("Create a pin number!"), encryption, Save_Button, Back_Button, Messages);
+        root.setAlignment(Pos.CENTER);
+        stage.setScene(new Scene(root, 400, 300));
+
+    }
+
+
+    public void login(Stage stage){
+        PasswordField encryption_two = new PasswordField();
+        Label Err_Msg = new Label();
+
+        Button Loginbutton = new Button("Login");
+        Button Escapebutton = new Button("Escape");
+
+
+        Loginbutton.setOnAction(e-> {
+            try{
+                List<String> password = Files.readAllLines(Paths.get("accounts.txt"));
+                if(password.contains(encryption_two.getText())){
+                    Guests(stage);
+                } else{
+                    Err_Msg.setText("Invalid pin");
+                }
+            } catch (IOException ex){
+                Err_Msg.setText("Error");
+            }
+        });
+        Escapebutton.setOnAction(e->loginView.start(stage));
+        VBox root = new VBox(10, new Label("enter pin number"), encryption_two, Loginbutton, Escapebutton, Err_Msg);
+        root.setAlignment(Pos.CENTER);
+
+
+        stage.setScene(new Scene(root, 400, 300));
+    }
+
+
 
 }
