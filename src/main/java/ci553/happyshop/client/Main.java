@@ -16,6 +16,8 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import java.io.IOException;
 
+;
+
 /**
  * The Main JavaFX application class. The Main class is executable directly.
  * It serves as a foundation for UI logic and starts all the clients (UI) in one go.
@@ -32,7 +34,6 @@ import java.io.IOException;
  * @version 1.0
  * @author  Shine Shan University of Brighton
  */
-
 public class Main extends Application {
 
     public static void main(String[] args) {
