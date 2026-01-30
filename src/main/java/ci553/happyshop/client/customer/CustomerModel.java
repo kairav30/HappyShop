@@ -187,13 +187,7 @@ public class CustomerModel {
                 }
 
 
-                //TODO
-                // Add the following logic here:
-                // 1. Remove products with insufficient stock from the trolley.
-                // 2. Trigger a message window to notify the customer about the insufficient stock, rather than directly changing displayLaSearchResult.
-                //You can use the provided RemoveProductNotifier class and its showRemovalMsg method for this purpose.
-                //remember close the message window where appropriate (using method closeNotifierWindow() of RemoveProductNotifier class)
-                displayTaTrolley = ProductListFormatter.buildString(trolley);
+
                 RemoveProductNotifier signal = new RemoveProductNotifier();
                 signal.cusView = cusView;
                 signal.showRemovalMsg(errorMsg.toString());

@@ -50,4 +50,19 @@ public class LoginController {
 
     }
 
+
+    public void warehouse(Stage stage){
+        WarehouseView view = new WarehouseView();
+        WarehouseController controller = new WarehouseController();
+        WarehouseModel model = new WarehouseModel();
+        DatabaseRW databaseRW = DatabaseRWFactory.createDatabaseRW();
+
+        view.controller = controller;
+        controller.model = model;
+        model.view = view;
+        model.databaseRW = databaseRW;
+
+        view.start(stage);
+    }
+
 }
