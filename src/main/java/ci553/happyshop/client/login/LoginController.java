@@ -46,7 +46,7 @@ public class LoginController {
         OrderTracker orderTracker = new OrderTracker();
         orderTracker.registerWithOrderHub();
         OrderHub.getOrderHub().initializeOrderMap();
-
+        EmergencyExit.getEmergencyExit();
 
     }
     String btn_sty = // blueprint for styling buttons
