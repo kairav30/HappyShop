@@ -120,7 +120,7 @@ public class CustomerModel {
         updateView();
     }
 
-    void addToTrolley(){
+    public void addToTrolley(){
         if(theProduct!= null){
             int qty = cusView.cbQuantity_Levels.getValue(); // retrives the value from the combo box
             Product productVersion = new Product(theProduct.getProductId(), theProduct.getProductDescription(), theProduct.getProductImageName(), theProduct.getUnitPrice(), theProduct.getStockQuantity()); // A new variable that is used avoids any shared references errors
@@ -252,5 +252,9 @@ public class CustomerModel {
     //for test only
     public ArrayList<Product> getTrolley() {
         return trolley;
+    }
+
+    public void setTheProduct(Product product) {
+        this.theProduct = product;
     }
 }
